@@ -39,6 +39,7 @@ function App() {
         <Route exact path="/account" element={<Profile/>}></Route>
         <Route exact path="/me/update" element={<UpdateUser/>}></Route>
         <Route exact path="/password/update" element={<UpdatePassword/>}></Route>
+        <Route exact path="*" element={<Home />}> </Route>
       </Routes>
       <Footer />
     </Router>
