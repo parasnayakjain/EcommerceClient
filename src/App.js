@@ -25,7 +25,7 @@ function App() {
 
   const { user, isAuthenticated } = useSelector((state) => { return state.user })
   return (
-    <Router basename="/EcommerceClient">
+    <Router >
       {isAuthenticated&& <UserOptions user={user}/>}
       <Header />
       <Routes>
