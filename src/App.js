@@ -15,8 +15,8 @@ import Profile from './components/user/Profile';
 import UpdateUser from './components/user/UpdateUser';
 import UpdatePassword from './components/user/UpdatePassword';
 
-function App() {
 
+function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadUser())
@@ -25,7 +25,7 @@ function App() {
 
   const { user, isAuthenticated } = useSelector((state) => { return state.user })
   return (
-    <Router>
+    <Router basename="//EcommerceClient">
       {isAuthenticated&& <UserOptions user={user}/>}
       <Header />
       <Routes>
