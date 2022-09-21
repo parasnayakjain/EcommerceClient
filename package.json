@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://parasnayakjain.github.io",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
