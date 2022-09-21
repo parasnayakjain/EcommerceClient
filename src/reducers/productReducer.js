@@ -33,7 +33,7 @@ export const productReducer = (state = { products: null },action) => {
             case CLEAR_ERROR:
                 return {
                     error:null,
-                    products: null
+                    ...state
                 }
             default:
                 return state

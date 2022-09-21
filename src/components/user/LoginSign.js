@@ -5,7 +5,7 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import FaceIcon from "@material-ui/icons/Face";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, login, register } from "../../actions/userAction";
+import { clearError, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import {} from "../../images/Profile.png"
@@ -66,11 +66,16 @@ const LoginSign = () => {
   const redirect ="/account";
   //const redirect = location.search ? location.search.split("=")[1] : "/account";
 
+
+  if(!error){
+    alert.removeAll();
+    }
   useEffect(() => {
     if (error) {
-      alert.error(error.message);
-      dispatch(clearErrors());
+      dispatch(clearError());
+      alert.error(error); 
     }
+    
 
     if (isAuthenticated) {
       navigate(redirect)

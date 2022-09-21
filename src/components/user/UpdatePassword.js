@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./UpdatePassword.css";
 import Loader from "../Layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, resetPassword } from "../../actions/userAction";
+import { clearError, resetPassword } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import MetaData from "../Layout/MetaData";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
@@ -39,7 +39,7 @@ const UpdatePassword = () => {
   useEffect(() => {
     if (error) {
       alert.error(error);
-      dispatch(clearErrors());
+      dispatch(clearError());
     }
 
     if (success) {

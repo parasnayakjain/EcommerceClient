@@ -1,5 +1,5 @@
 import axios from "axios"
-import { LOGIN_REQUEST, LOGIN_FAIL, LOGIN_SUCCESS, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS, REGISTER_USER_FAIL, CLEAR_ERRORS, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOAD_USER_FAIL, LOGOUT_FAIL, LOGOUT_SUCCESS, UPDATE_PROFILE_REQUEST, UPDATE_PROFILE_SUCCESS, UPDATE_PROFILE_FAIL, RESET_PASSWORD_REQUEST, RESET_PASSWORD_FAIL, RESET_PASSWORD_SUCCESS } from "../constants/userConstants"
+import { LOGIN_REQUEST, LOGIN_FAIL, LOGIN_SUCCESS, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS, REGISTER_USER_FAIL, CLEAR_ERROR, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOAD_USER_FAIL, LOGOUT_FAIL, LOGOUT_SUCCESS, UPDATE_PROFILE_REQUEST, UPDATE_PROFILE_SUCCESS, UPDATE_PROFILE_FAIL, RESET_PASSWORD_REQUEST, RESET_PASSWORD_FAIL, RESET_PASSWORD_SUCCESS } from "../constants/userConstants"
 import FormData from 'form-data';
 
 export const login = (email, password) => {
@@ -14,7 +14,6 @@ export const login = (email, password) => {
                     "Content-Type": "application/json",
                     "Access-Control-Allow-Credentials": true,
                     "Access-Control-Allow-Origin": "*"
-
                 },
                 "withCredentials": true
             };
@@ -48,7 +47,7 @@ export const register = ({ name, email, password, avatar }) => {
             formData.set('email', email);
             formData.set('password', password);
             formData.set('avatar', avatar);
-            console.log(formData);
+            
             const config = {
                 headers: { "Contetnt-Type": "multipart/form-data" },
                 "withCredentials": true
@@ -87,13 +86,10 @@ export const loadUser = () => {
                 type: LOAD_USER_SUCCESS,
                 payload: data.data.user
             })
-        } catch (error) {
+        } catch (error){
             dispatch({
                 type: LOAD_USER_FAIL,
-                payload: {
-                    error: error,
-                    message: error.response.data.message
-                }
+                payload: error.response.data.message
             })
         }
     }
@@ -140,7 +136,6 @@ export const updateProfile = (form) => {
             };
 
             const data = await axios.put(path, form, config);
-            console.log(data)
             dispatch({
                 type: UPDATE_PROFILE_SUCCESS,
                 payload: data.data
@@ -187,9 +182,8 @@ export const resetPassword = (form) => {
         }
     }
 }
-export const clearErrors = () => {
+export const clearError = () => {
     return async (dispatch) => {
-
-        dispatch({ type: CLEAR_ERRORS })
+        dispatch({ type: CLEAR_ERROR })
     }
 }

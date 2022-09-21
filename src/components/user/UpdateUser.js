@@ -4,7 +4,7 @@ import Loader from "../Layout/Loader";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import FaceIcon from "@material-ui/icons/Face";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, updateProfile, loadUser } from "../../actions/userAction";
+import { clearError, updateProfile, loadUser } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { UPDATE_PROFILE_RESET } from "../../constants/userConstants";
 import MetaData from "../Layout/MetaData";
@@ -56,7 +56,7 @@ const UpdateProfile = () => {
 
     if (error) {
       alert.error(error);
-      dispatch(clearErrors());
+      dispatch(clearError());
     }
 
     if (isUpdated) {
