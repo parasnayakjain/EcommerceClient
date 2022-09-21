@@ -30,6 +30,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/EcommerceClient" element={<Home />} />
         <Route exact path="/product/:id" element={<ProductDetails />}></Route>
         <Route exact path="/products" element={<AllProducts />}></Route>
         <Route exact path="/search" element={<Search />}></Route>
