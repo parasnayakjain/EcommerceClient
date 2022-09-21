@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://parasnayakjain.github.io",
+  "homepage": "https://parasnayakjain.github.io/EcommerceClient",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/data-grid": "^4.0.0-alpha.37",
