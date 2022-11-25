@@ -36,7 +36,7 @@ export const login = (email, password) => {
 }
 
 export const register = ({ name, email, password, avatar }) => {
-    const path = "https://serverofecommercer.herokuapp.com/api/v1/registerUser";
+    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/registerUser";
     const pathLocal = "http://localhost:4000/api/v1/registerUser";
 
     return async (dispatch) => {
@@ -72,7 +72,7 @@ export const register = ({ name, email, password, avatar }) => {
 
 
 export const loadUser = () => {
-    const path = "https://serverofecommercer.herokuapp.com/api/v1/user";
+    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/user";
     const pathLocal = "http://localhost:4000/api/v1/user";
     return async (dispatch) => {
         try {
@@ -97,7 +97,7 @@ export const loadUser = () => {
 
 export const logout = () => {
     return async (dispatch) => {
-        const path = "https://serverofecommercer.herokuapp.com/api/v1/logout";
+        const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/logout";
         const pathLocal = "http://localhost:4000/api/v1/logout";
         try {
 
@@ -117,7 +117,7 @@ export const logout = () => {
 }
 
 export const updateProfile = (form) => {
-    const path = "https://serverofecommercer.herokuapp.com/api/v1/user";
+    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/user";
     const pathLocal = "http://localhost:4000/api/v1/user";
     return async (dispatch) => {
         try {
@@ -151,7 +151,7 @@ export const updateProfile = (form) => {
 }
 
 export const resetPassword = (form) => {
-    const path = "https://serverofecommercer.herokuapp.com/api/v1/updatePassword";
+    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/updatePassword";
     const pathLocal = "http://localhost:4000/api/v1/updatePassword";
     return async (dispatch) => {
         try {

@@ -1,7 +1,7 @@
 import { PRODUCT_FAILURE, PRODUCT_SUCCESS, PRODUCT_REQUEST } from "../constants/productConstants"
 import axios from "axios";
 
-const path="https://serverofecommercer.herokuapp.com";
+const path="https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app";
 //const pathLocal="http://localhost:4000"
 const getProductDetails = (id) => {
 
