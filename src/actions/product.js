@@ -11,7 +11,7 @@ import {
 
 export const getProducts=(keyword="", currentPage=1, category ,price=[0,10000] )=>{
     console.log(keyword);
-    const path="https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app";
+    const path="";
     const pathLocal="http://localhost:4000"
     return async(dispatch)=>{
  try {
