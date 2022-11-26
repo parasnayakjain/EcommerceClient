@@ -96,12 +96,20 @@ export const loadUser = () => {
 }
 
 export const logout = () => {
+    const config = {
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
+        },
+        "withCredentials": true
+    };
     return async (dispatch) => {
         const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/logout";
         const pathLocal = "http://localhost:4000/api/v1/logout";
         try {
 
-            const data = await axios.get(path, { "withCredentials": true })
+            const data = await axios.get(path, config);
 
             dispatch({
                 type: LOGOUT_SUCCESS
