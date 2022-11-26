@@ -3,7 +3,7 @@ import { LOGIN_REQUEST, LOGIN_FAIL, LOGIN_SUCCESS, REGISTER_USER_REQUEST, REGIST
 import FormData from 'form-data';
 
 export const login = (email, password) => {
-    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1";
+    const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/login";
     const pathLocal = "http://localhost:4000/api/v1/login";
     return async (dispatch) => {
         try {
