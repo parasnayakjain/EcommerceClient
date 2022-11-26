@@ -105,7 +105,7 @@ export const logout = () => {
         "withCredentials": true
     };
     return async (dispatch) => {
-        const path = "https://ecommerce-server-vercel-lgvq7k172-parasnayakjain.vercel.app/api/v1/logout";
+        const path = "https://ecommerce-server-vercel-holrfkf1o-parasnayakjain.vercel.app/api/v1/logout";
         const pathLocal = "http://localhost:4000/api/v1/logout";
         try {
 
