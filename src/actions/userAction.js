@@ -109,7 +109,7 @@ export const logout = () => {
         const pathLocal = "http://localhost:4000/api/v1/logout";
         try {
 
-            const data = await axios.get(path, config);
+            const data = await axios.post(path,{}, config);
 
             dispatch({
                 type: LOGOUT_SUCCESS
